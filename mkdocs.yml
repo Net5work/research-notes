@@ -1,0 +1,71 @@
+site_name: "mgc's Blog"
+site_description: Research notes on Malware Analysis, Reverse Engineering, Windows Internals and Offensive Security
+
+theme:
+  name: material
+
+  logo: images/logo.png
+  favicon: images/logo.png
+
+  icon:
+    repo: fontawesome/solid/hashtag
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+
+extra_javascript:
+  - javascripts/logo-popup.js
+
+plugins:
+  - search
+  - glightbox
+
+nav:
+  - Home: index.md
+
+  - Offensive Security:
+      - Explore: offensive-security/index.md
+      - AMSI: offensive-security/amsi.md
+
+  - Reverse Engineering:
+      - index: reverse/index.md
+
+  - Windows Internals:
+      - index: windows/index.md
+
+  - Active Directory:
+      - index: ad/index.md
+
+  - HTB:
+      - index: htb/index.md

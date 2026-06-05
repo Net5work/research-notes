@@ -1,0 +1,128 @@
+
+/* =========================
+   IMAGE / CONTENT STYLING
+   ========================= */
+
+.md-content img {
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+    transition: transform .2s ease;
+}
+
+.md-content img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   INLINE CODE HIGHLIGHT
+   ========================= */
+
+.md-typeset code:not(pre code) {
+    color: #00e5ff;
+    background-color: rgba(0, 229, 255, 0.08);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+}
+
+
+/* =========================
+   HEADERS STYLE
+   ========================= */
+
+.md-content h2 {
+    margin-top: 2rem;
+    border-left: 3px solid #00e5ff;
+    padding-left: 10px;
+}
+
+
+/* =========================
+   TERMINAL FONT
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
+body {
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+/* =========================
+   HEADER STYLING
+   ========================= */
+
+.md-header {
+    background-color: #0d1117;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.md-content {
+    font-size: 0.95rem;
+}
+
+.md-typeset h1 {
+    color: #00e5ff;
+    font-weight: 600;
+}
+
+
+/* =========================
+   LOGO (FIXED - SINGLE SOURCE)
+   ========================= */
+
+.md-header__button.md-logo img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+    display: block;
+    border-radius: 65%;
+
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.25);
+}
+
+
+/* =========================
+   HEADER ALIGNMENT
+   ========================= */
+
+.md-header__inner {
+    align-items: center;
+}
+
+.md-header__title {
+    margin-left: 0.5rem;
+    display: block;
+}
+
+
+/* =========================
+   🚀 TERMINAL SITE NAME (ADDED FEATURE)
+   ========================= */
+
+.md-header__title {
+    position: relative;
+}
+
+/* terminal prefix */
+.md-header__title .md-ellipsis::before {
+    content: "mgc@research:~# ";
+    color: #4da3ff;
+    font-weight: 600;
+}
+
+/* site name styling */
+.md-header__title .md-ellipsis {
+    font-family: "JetBrains Mono", monospace;
+    color: #7c5cff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(124, 92, 255, 0.25);
+    display: inline-block;
+    vertical-align: middle;
+}
